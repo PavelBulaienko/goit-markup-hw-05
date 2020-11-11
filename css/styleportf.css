@@ -233,6 +233,29 @@ h3 {
   letter-spacing: 0.03em;
   color: var(--grey);
 }
+.gallery-thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.gallery-thumb > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+  padding: 63px 24px;
+  color: var(--white);
+}
+.gallery-link:hover .overlay {
+  transform: translateY(0);
+  transition: transform 250ms ease;
+}
 .border-name {
   margin: 0;
   padding-left: 24px;
