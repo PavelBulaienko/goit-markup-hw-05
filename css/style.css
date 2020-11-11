@@ -172,6 +172,46 @@ h3 {
   padding-right: 32px;
   padding-left: 32px;
 }
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--white);
+}
+.closeModalBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-close {
+  width: 11px;
+  height: 11px;
+}
 .hero {
   display: flex;
   flex-direction: column;
@@ -211,7 +251,7 @@ h3 {
   text-transform: uppercase;
   color: var(--white);
 }
-.hero .hero-btn {
+.hero .openModalBtn {
   background-color: var(--blue);
   color: var(--white);
   font-weight: 700;
@@ -278,6 +318,33 @@ h3 {
 .work-item:nth-child(3n) {
   margin-right: 0;
 }
+.img-work {
+  position: relative;
+  height: 294px;
+}
+.div-work-description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding: 27px 82px;
+}
+.work-description {
+  height: 16px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+}
 .team {
   display: flex;
   flex-direction: column;
@@ -320,9 +387,8 @@ h3 {
 .team-item {
   background-color: var(--white);
   margin-right: 30px;
-  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
 }
 .team-item:nth-child(4n) {
   margin-right: 0;
