@@ -206,10 +206,17 @@ h3 {
 .gallery-item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
-.gallery-item:hover {
-  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
-  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+.gallery-link:hover,
+.gallery-link:focus {
+  display: block;
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+.gallery-description {
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  color: var(--grey);
 }
 .border-name {
   margin: 0;
