@@ -93,6 +93,7 @@ h3 {
 }
 .nav-item {
   margin-right: 49px;
+  position: relative;
 }
 .nav-item:last-child {
   margin-right: 0;
@@ -107,8 +108,22 @@ h3 {
 .nav .portfolio {
   color: var(--blue);
 }
-.nav > li > a:focus,
-.nav > li > a:hover {
+.portfolio > .nav-link::after {
+  width: 77px;
+
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  height: 4px;
+  min-width: 48px;
+  border: 1px solid var(--blue);
+  border-radius: 2px;
+  overflow: visible;
+  background-color: var(--blue);
+}
+.nav-link:hover,
+.nav-link:focus {
   color: var(--blue);
 }
 .addr {
