@@ -252,7 +252,8 @@ h3 {
   padding: 63px 24px;
   color: var(--white);
 }
-.gallery-link:hover .overlay {
+.gallery-link:hover .overlay,
+.gallery-link:focus .overlay {
   transform: translateY(0);
   transition: transform 250ms ease;
 }
